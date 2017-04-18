@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ElementUniqueness</name>
+	<name>FastestRoute</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>pa1_input.txt</name>
-			<type>1</type>
-			<location>C:/Users/William Breen/Documents/Eclipse_Projects/1Algorithms_Analysis/ElementUniqueness/pa1_input.txt</location>
-		</link>
-	</linkedResources>
 </projectDescription>
