@@ -1,0 +1,68 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+/*
+ * The GraphMaker class asks the user to enter the name of a file. 
+ * The code should then read in the input file and produce the corresponding graph.
+ * The first line of the file will be the number of vertices. 
+ * The next lines will give the edges as a table where table(i,j) gives the 
+ * edge weight between vertices i and j. 
+ * The two provided files are in this format.
+ */
+public class GraphMaker {
+	public AdjListGraph makeGraphFromFile(String fileName) {
+		// Create a new directed AdjListGraph and read from the file to
+		// add DijkstraVertex and Edge object to the graph.
+		AdjListGraph graph = new AdjListGraph(true);
+
+		//enter the name of a file
+		//TODO: double check about the filename
+		//		Scanner sc = new Scanner(System.in);
+		//		String myFile = sc.next();
+		File input = new File(fileName);
+
+		// read the input file
+		Scanner fileSC = null;
+		try{
+			fileSC = new Scanner(input);
+
+		} catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		//go through and get next int the number of times that there are vertices, which is the first number in the file
+		double numVertices = fileSC.nextDouble();
+		Vertex []verticies = new Vertex[(int) numVertices+1];
+		System.out.println("length of new array is :"+numVertices);
+		double counter = 0;
+		while(counter < numVertices){
+			//String vertexName = "Vertex" + Double.toString(counter);
+			Vertex a = graph.addVertex(new DijkstraVertex(fileSC.next()));
+			verticies[(int) counter]=a;
+			counter++;
+		}
+
+
+		for(int i = 0; i<numVertices; i++){
+			for(int j = 0; j<numVertices; j++){
+				if(fileSC.hasNextDouble()){
+					double edgeToAdd = fileSC.nextDouble();
+					if(edgeToAdd >0){
+						graph.addEdge(verticies[i], verticies[j], edgeToAdd);
+						System.out.println("added length"+edgeToAdd + " from:"+verticies[i] +" to:"+verticies[j]);
+					}
+				}
+				else{
+					fileSC.next();
+				}
+			}
+		}
+
+
+		//TODO: produce the graph based on the file
+
+		//TODO: remove the print statement
+		graph.print();
+		return graph;
+	}
+}
