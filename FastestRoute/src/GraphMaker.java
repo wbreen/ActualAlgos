@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /*
+ * William Breen and Evan Elkin
  * The GraphMaker class asks the user to enter the name of a file. 
  * The code should then read in the input file and produce the corresponding graph.
  * The first line of the file will be the number of vertices. 

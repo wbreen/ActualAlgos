@@ -1,0 +1,22 @@
+Evan Elkin and William Breen
+PA3: Dijkstra Algorithm
+
+We worked together when creating the Dijkstra program.
+First, we worked on the GraphMaker. Will did the bulk of the
+work, while Evan assisted and helped when stuck. For the
+Dijkstra section, Evan outlined how the class should 
+work and be written, and we worked together to
+apply the Dijkstra Algorithm
+to Java code. We also worked together
+when it came to modifying the main section.
+
+There was nothing that seems unusual or unexpected.
+ At first, we had lots of trouble with the GraphMaker, 
+ and there was a point where we weren’t initializing t
+ he graph correctly. However, we did get this to work. 
+ Unfortunately, the Dijkstra's algorithm couldn't be completed
+ because we couldn't figure out how to even initialize the values
+ of the vertexes to infinity, as if we changed the edges, then
+ we couldn't use them to set distances later, and we could not 
+ figure out a  way to change from a regular vertex to a Dijkstra's
+ vertex.

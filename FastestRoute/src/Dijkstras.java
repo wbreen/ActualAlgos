@@ -1,4 +1,5 @@
-/*
+/*William Breen and Evan Elkin
+ * 
  * Uses the GraphMaker to make the graph, asks the user for the source vertex 
  * and destination vertex, and then runs Dijkstra's algorithm. The shortest 
  * path length as well as the actual path should be printed to the screen, 
@@ -80,6 +81,20 @@ public class Dijkstras {
 //				
 //			}
 		}
+		/*Pseudocode because we couldn't get Dijkstra's working
+		 * 
+		 * while(Q != null){
+		 * u = Extract_Min(Q);
+		 * S = S.add(path);
+		 * for(v:adj[u]){
+		 * if(d[v] > d[u] && w(u, v)){
+		 * d[v] = d[u] + w(u, v);
+		 * p[v] = u;
+		 * Decrease_Key(Q, v, d[v]);
+		 * }
+		 * }
+		 * }
+		 */
 		
 		// Make a PriorityQueue (imported above in Java.Util.PriorityQueue)
 		// of DijkstraVertex objects.
